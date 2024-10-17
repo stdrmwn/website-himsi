@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navigasi">
+          <div class="logo-text-container">
+            <img src="logohimsi2.png" alt="Logo" class="logo-image">
+            <div class="logo-text">
+              <h2>Himpunan Mahasiswa <span class="purple-text">Sistem Informasi</span> Universitas <span class="orange-text">Pradita</span></h2>
+            </div>
+          </div>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#slider">Home</a></li>
+            <li><a href="#educationSection">Members</a></li>
+            <li><a href="#prokerSection">Events</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">
+                  Services <i class="fas fa-chevron-down"></i>
+                </a>
+                <div class="dropdown-content">
+                  <a href="https://www.pradita.ac.id/publication/how-to-attract-investors-with-pitching-webinar-dan-kompetisi" target="_blank">Workshop</a>
+                  <a href="https://forms.gle/qnGY77XgCtaRcow56" target="_blank">Aspiration</a>
+                  <a href="https://www.google.com/maps/place/Universitas+Pradita" target="_blank">Visit Us</a>
+                </div>
+              </li>                          
+            <li><a href="javascript:void(0)" class="theme-switcher">Dark Mode</a></li>
+          </ul>
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+        </nav>
+      </header>
+      
+
+        <main>
+          <section id="slider">
+            <div class="slideshow-container">
+                <div class="mySlides">
+                    <img src="slider1.JPG" alt="Slide 1">
+                </div>
+                <div class="mySlides">
+                    <img src="slider2.jpg" alt="Slide 2">
+                </div>
+                <div class="mySlides">
+                    <img src="slider3.jpg" alt="Slide 3">
+                </div>
+            </div>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </section>     
+      <section id="educationSection">
+        <article class="box-pendidikan" id="Education">
+            <h1><span class="highlight">Our</span> <span class="utama">Members</span></h1>
+            <div class="menu">
+                <select id="educationDropdown">
+                    <option value="all">Tampilkan Semua</option>
+                    <option value="ketua">Ketua</option>
+                    <option value="wakilketua">Wakil Ketua</option>
+                    <option value="acara">Divisi Acara</option>
+                    <option value="perlengkapan">Divisi Perlengkapan</option>
+                    <option value="eksternal">Divisi Eksternal</option>
+                    <option value="medkre">Divisi Media Kreatif</option>
+                </select>
+            </div>
+            <div class="education-boxes">
+                <div class="box-1" id="ketua">
+                    <aside>
+                        <img src="ketua.png" alt="ketua">
+                    </aside>
+                    <p>
+                        <h3>Ketua Himpunan</h3>
+                    </p>
+                    <p>Chelyne</p>
+                    <button onclick="showPopup('popupKetua')">Lihat Tupoksi</button>
+                </div>
+            
+                <div class="box-2" id="wakilketua">
+                    <aside>
+                        <img src="wakilketua.png" alt="wakilketua">
+                    </aside>
+                    <p>
+                        <h3>Wakil Ketua Himpunan</h3>
+                    </p>
+                    <p>Steven Dermawan</p>
+                    <button onclick="showPopup('popupWakil')">Lihat Tupoksi</button>
+                </div>
+            
+                <div class="box-3" id="acara">
+                    <aside>
+                        <img src="acara.png" alt="acara">
+                    </aside>
+                    <p>
+                        <h3>Divisi Acara</h3>
+                    </p>
+                    <p>Danendra (Koordinator), Gevin, Nur Amalina</p>
+                    <button onclick="showPopup('popupAcara')">Lihat Tupoksi</button>
+                </div>
+            
+                <div class="box-4" id="perlengkapan">
+                    <aside>
+                        <img src="perlengkapan.png" alt="perlengkapan">
+                    </aside>
+                    <p>
+                        <h3>Divisi Perlengkapan</h3>
+                    </p>
+                    <p>Azza (Koordinator), Hisyam, Kevin</p>
+                    <button onclick="showPopup('popupPerlengkapan')">Lihat Tupoksi</button>
+                </div>
+            
+                <div class="box-5" id="medkre">
+                    <aside>
+                        <img src="medkre.png" alt="medkre">
+                    </aside>
+                    <p>
+                        <h3>Divisi Medkre</h3>
+                    </p>
+                    <p>Rafly (Koordinator), Greycia, Varez, Sabrina, Efraim</p>
+                    <button onclick="showPopup('popupMedkre')">Lihat Tupoksi</button>
+                </div>
+            
+                <div class="box-6" id="eksternal">
+                    <aside>
+                        <img src="eksternal.png" alt="eksternal">
+                    </aside>
+                    <p>
+                        <h3>Divisi Eksternal</h3>
+                    </p>
+                    <p>Ifdal (Koordinator), Andrew, Keisha, Fidian</p>
+                    <button onclick="showPopup('popupEksternal')">Lihat Tupoksi</button>
+                </div>
+            </div>
+            
+            <!-- Pop-ups -->
+            <div id="popupKetua" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('popupKetua')">&times;</span>
+                    <h3>Ketua Himpunan</h3>
+                    <p>Chelyne adalah ketua himpunan yang bertanggung jawab atas keseluruhan divisi supaya bisa berjalan dengan baik.</p>
+                </div>
+            </div>
+            
+            <div id="popupWakil" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('popupWakil')">&times;</span>
+                    <h3>Wakil Ketua Himpunan</h3>
+                    <p>Steven Dermawan bertanggung jawab mendukung ketua dalam pelaksanaan tugas dan memimpin jika ketua tidak ada.</p>
+                </div>
+            </div>
+            
+            <div id="popupAcara" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('popupAcara')">&times;</span>
+                    <h3>Divisi Acara</h3>
+                    <p>Divisi Acara bertanggung jawab atas penyelenggaraan semua acara internal dan eksternal.</p>
+                </div>
+            </div>
+            
+            <div id="popupPerlengkapan" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('popupPerlengkapan')">&times;</span>
+                    <h3>Divisi Perlengkapan</h3>
+                    <p>Divisi Perlengkapan bertugas mengatur kebutuhan perlengkapan selama pelaksanaan acara yang dilaksanakan.</p>
+                </div>
+            </div>
+            
+            <div id="popupMedkre" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('popupMedkre')">&times;</span>
+                    <h3>Divisi Medkre</h3>
+                    <p>Divisi Medkre menangani media kreatif dan dokumentasi acara selama acara berlangsung.</p>
+                </div>
+            </div>
+            
+            <div id="popupEksternal" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup('popupEksternal')">&times;</span>
+                    <h3>Divisi Eksternal</h3>
+                    <p>Divisi Eksternal bertugas membangun hubungan dan kerjasama dengan pihak luar.</p>
+                </div>
+            </div>
+        </article>            
+    </section>
+        <section id="prokerSection">
+            <h2><span class="highlight">Our Main</span> <span class="utama">Events</span></h2>
+            <div class="card-container">
+                            <!-- Card 1 -->
+                            <div class="card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="lombaesai.png" alt="Proker 1" class="card-image">
+                                        <h3>Lomba Esai</h3>
+                                        <p>Perlombaan akademik untuk siswa-siswa SMA/SMK sederajat</p>
+                                        <button class="flip-btn" onclick="flipCard(this)">Lihat Detail</button>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>Lomba esai HIMSI Pradita adalah kompetisi tingkat nasional yang diselenggarakan oleh Himpunan Mahasiswa Sistem Informasi (HIMSI) Universitas Pradita. Lomba ini mengundang partisipasi dari siswa SMA/SMK sederajat dan mahasiswa dari seluruh Indonesia untuk mengembangkan gagasan kreatif dan solutif terkait isu-isu terkini dalam bidang teknologi, informasi, dan transformasi digital.</p>
+                                        <button class="close-btn" onclick="closeCard(this)">X</button>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Card 2 -->
+                            <div class="card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="charity1.jpg" alt="Proker 2" class="card-image">
+                                        <h3>Charity</h3>
+                                        <p>Kegiatam berbagi berkah untuk umum.</p>
+                                        <button class="flip-btn" onclick="flipCard(this)">Lihat Detail</button>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>HIMSI Pradita secara rutin menyelenggarakan kegiatan charity sebagai bagian dari program pengabdian masyarakat. Kegiatan ini bertujuan untuk membantu masyarakat yang membutuhkan dengan berbagai bentuk bantuan, seperti sumbangan sembako, alat tulis, atau kebutuhan lainnya. Selain itu, kegiatan ini juga menjadi sarana untuk meningkatkan rasa kepedulian sosial mahasiswa dan memfasilitasi interaksi positif antara kampus dan masyarakat sekitar.</p>
+                                        <button class="close-btn" onclick="closeCard(this)">X</button>
+                                    </div>
+                                </div>
+                            </div>
+                    
+                            <!-- Card 3 -->
+                            <div class="card">
+                                <div class="card-inner">
+                                    <div class="card-front">
+                                        <img src="lombaesport.jpeg" alt="Proker 3" class="card-image">
+                                        <h3>Lomba Esport</h3>
+                                        <p>Lomba non akademik yang diselenggarakan untuk umum.</p>
+                                        <button class="flip-btn" onclick="flipCard(this)">Lihat Detail</button>
+                                    </div>
+                                    <div class="card-back">
+                                        <p>HIMSI Pradita menyelenggarakan lomba e-sport sebagai bagian dari kegiatan kemahasiswaan yang bertujuan untuk mengembangkan minat dan bakat mahasiswa di bidang gaming dan teknologi. Salah satu lomba yang diadakan adalah turnamen Valorant bertajuk "Valorantkuy." Acara ini melibatkan peserta dari berbagai universitas dan komunitas, dengan tujuan mempromosikan sportivitas, teamwork, dan kompetisi yang sehat.</p>
+                                        <button class="close-btn" onclick="closeCard(this)">X</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+                
+        <section id="projectSection">
+            <!-- Maps to Universitas Pradita -->
+            <h3><span class="highlight">Find</span> <span class="utama">Us</span></h3>
+            <div class="map-container">
+                <div class="map-responsive">    
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0223457763923!2d106.61586637378065!3d-6.260786661292559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69fc7ca656fdfd%3A0x782b035b695c85dc!2sUniversitas%20Pradita!5e0!3m2!1sid!2sid!4v1726680850216!5m2!1sid!2sid" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <p>Click <a href="https://www.google.com/maps/place/Universitas+Pradita" target="_blank">here</a> to open in Google Maps</p>
+            </div>
+        </section>
+        
+
+        <aside class="profile-container">
+            <div class="left-side">
+                <p>HIMSI (Himpunan Mahasiswa Sistem Informasi) Universitas Pradita adalah organisasi mahasiswa yang bertujuan untuk mengembangkan minat dan bakat mahasiswa Sistem Informasi di berbagai bidang, termasuk akademik, non-akademik, dan pengabdian masyarakat.</p>
+            </div>
+            <div class="right-side">
+                <div class="profile-info">
+                    <img src="profile.jfif" alt="Profile Picture" class="profile-img">
+                    <div>
+                        <p>Saya adalah seorang fullstack developer. Saya merupakan mahasiswa S1 Sistem Informasi Universitas Pradita.</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        
+        
+        <section id="contactSection">
+            <h3><span class="highlight">Keep in</span> <span class="utama">Touch</span></h3>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
+            <p id="form-message"></p>
+        </section>
+    </main>
+    
+
+<!-- Footer -->
+<footer id="footer">
+    <!-- Link Navigasi -->
+    <div class="footer-links">
+        <a href="#educationSection">About Us</a> |
+        <a href="#prokerSection">Events</a> |
+        <a href="#contact">Contact</a> |
+        <a href="#privacy">Privacy Policy</a>
+    </div>
+
+    <!-- Sosial Media -->
+    <div class="footer-social">
+        <a href="https://www.instagram.com/himsipradita" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/himsipradita" target="_blank">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/himsipradita" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+    </div>
+
+    <!-- Informasi Kontak -->
+    <div class="footer-contact">
+        <p>Universitas Pradita, Jl. Scientia Boulevard, Tangerang, Banten</p>
+        <p>Email: <a href="mailto:himsipradita@gmail.com">himsipradita@gmail.com</a></p>
+        <p>Telepon: (021) 123-4567</p>
+    </div>
+
+    <!-- Hak Cipta -->
+    <p>&copy; 2024 HIMSI Pradita. All Rights Reserved.</p>
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
